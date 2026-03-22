@@ -2007,20 +2007,18 @@ h1 {
   }
 }
 
-/* This code only triggers on mobile screens */
-@media screen and (max-width: 600px) {
-    .container {
-        transform: scale(0.6); /* Shrinks everything to 60% size */
-        transform-origin: center top;
+@media screen and (max-width: 800px) {
+    body {
+        width: 100vw !important;
+        height: 100vh !important;
+        overflow: hidden !important;
+        position: fixed !important;
     }
 
-    h1 {
-        font-size: 1.5rem !important; /* Makes the "Flowers for You" text smaller */
-        text-align: center;
-    }
-
-    /* If your flowers have a specific class name like .flower or .sunflower */
-    .flower {
-        margin: 0 10px; /* Pulls them closer together so they don't drift off screen */
+    .container, #birthday, .night {
+        transform: scale(0.5) !important;
+        transform-origin: center center !important;
+        width: 200% !important; /* This gives the flowers room to exist while scaled */
+        left: -50% !important; /* This recenters them after scaling */
     }
 }
