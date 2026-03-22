@@ -2006,3 +2006,21 @@ h1 {
     opacity: 1;
   }
 }
+
+/* This code only triggers on mobile screens */
+@media screen and (max-width: 600px) {
+    .container {
+        transform: scale(0.6); /* Shrinks everything to 60% size */
+        transform-origin: center top;
+    }
+
+    h1 {
+        font-size: 1.5rem !important; /* Makes the "Flowers for You" text smaller */
+        text-align: center;
+    }
+
+    /* If your flowers have a specific class name like .flower or .sunflower */
+    .flower {
+        margin: 0 10px; /* Pulls them closer together so they don't drift off screen */
+    }
+}
